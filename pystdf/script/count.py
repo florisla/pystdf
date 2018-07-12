@@ -65,8 +65,12 @@ def process_file(file_name):
     print("Record count: ", indexer.recid)
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) < 2:
         print("Usage: %s <stdf file>" % (sys.argv[0]))
     else:
         process_file(sys.argv[1])
+
+
+if __name__ == "__main__":
+    main()

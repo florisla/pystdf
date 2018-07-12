@@ -36,9 +36,16 @@ def text_slice(file_name, start_index, record_count):
     p.parse(count=record_count)
 
 
-if __name__ == '__main__':
+def main():
+    print(sys.argv)
+    if len(sys.argv) < 4:
+        sys.exit("Error: not enough arguments given. Supply 'start' and 'count' as integers.")
     filename, start, count = sys.argv[1:4]
     start = int(start)
     count = int(count)
 
     text_slice(filename, start, count)
+
+
+if __name__ == '__main__':
+    main()

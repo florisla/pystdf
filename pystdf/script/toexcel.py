@@ -48,8 +48,15 @@ def to_excel(stdf_file, xlsx_file=None):
     writer.save()
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         print("Usage: %s <stdf file>" % (sys.argv[0]))
     else:
-        to_excel(sys.argv[1], sys.argv[2])
+        if len(sys.argv) == 3:
+            to_excel(sys.argv[1], sys.argv[2])
+        else:
+            to_excel(sys.argv[1], None)
+
+
+if __name__ == "__main__":
+    main()
