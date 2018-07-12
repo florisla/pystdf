@@ -17,6 +17,10 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
 
+
+from .__version__ import VERSION
+__version__ = '.'.join(str(num) for num in VERSION)
+
 from pystdf.TableTemplate import TableTemplate
 
 from pystdf.BinSummarizer import BinSummarizer
